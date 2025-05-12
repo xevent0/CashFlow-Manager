@@ -21,7 +21,7 @@ def init_db(db_name):
     return True
 
 def fetch_expenses():
-    query = QSqlQuery("SELECT * FROM expenses ORDER BY date DESC")
+    query = QSqlQuery("SELECT * FROM expenses ORDER BY id DESC")
     expenses = []
     while query.next():
         expenses.append([query.value(i) for i in range(5)])
